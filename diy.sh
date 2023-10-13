@@ -13,18 +13,22 @@
 # Add luci-app-ssr-plus
 git clone --depth=1 https://github.com/fw876/helloworld.git ./package/lean/helloworld
 
-# Add OpenClash
-# svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./package/lean/luci-app-openclash
+# Add luci-app-openclash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash ./package/lean/luci-app-openclash
 
 # Add luci-app-passwall
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall ./package/lean/openwrt-passwall
-# svn co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./package/lean/openwrt-passwall
+git clone -b main --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git ./package/lean/passwall
+svn_co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall ./package/lean/passwall
+
+# Add luci-app-passwall2
+git clone -b main --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git ./package/lean/passwall2
+svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 ./package/lean/passwall2
 
 # Add luci-app-vssr
-# cd ./package/lean/
-# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git
-# cd $OLDPWD
+cd ./package/lean/
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git
+cd $OLDPWD
 
 # Add luci-app-netdata
 rm -rf ./feeds/luci/applications/luci-app-netdata/
@@ -40,9 +44,6 @@ sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/conf
 
 # Add luci-app-poweroff
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff ./package/lean/luci-app-poweroff
-
-# Mod kernel_patchver
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.1/g' ./target/linux/rockchip/Makefile
 
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
