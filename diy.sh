@@ -28,7 +28,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall ./p
 # cd ./package/lean/
 # git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 # git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git
-cd $OLDPWD
+# cd $OLDPWD
 
 # Add luci-app-netdata
 rm -rf ./feeds/luci/applications/luci-app-netdata/
