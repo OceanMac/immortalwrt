@@ -10,17 +10,17 @@
 # Description: OpenWrt DIY script (After Update feeds)
 
 
-# poweroff
-echo 'src-git esirplayground https://github.com/esirplayground/luci-app-poweroff' >> feeds.conf.default
+# luci-app-poweroff
+echo 'src-git esir https://github.com/esirplayground/luci-app-poweroff.git;master' >> feeds.conf.default
 
-# passwall
+# luci-app-passwall
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> feeds.conf.default
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> feeds.conf.default
 
 # helloworld
 echo "src-git helloworld https://github.com/fw876/helloworld.git;master" >> feeds.conf.default
 
-# netdata
+# luci-app-netdata
 echo "src-git netdata https://github.com/Jason6111/luci-app-netdata.git;main" >> feeds.conf.default
 
 # lienol package
