@@ -11,7 +11,7 @@
 
 
 # poweroff
-echo 'src-git poweroff https://github.com/esirplayground/luci-app-poweroff' >> feeds.conf.default
+echo 'src-git esirplayground https://github.com/esirplayground/luci-app-poweroff' >> feeds.conf.default
 
 # passwall
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> feeds.conf.default
