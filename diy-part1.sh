@@ -17,5 +17,5 @@ echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >
 echo "src-git helloworld https://github.com/fw876/helloworld.git;master" >> feeds.conf.default
 
 # kenzok8 package
-echo "src-git kenzo https://github.com/kenzok8/openwrt-packages.git;master" >> feeds.conf.default
+echo "src-git smpackage https://github.com/kenzok8/small-package.git;master" >> feeds.conf.default
 echo "src-git small https://github.com/kenzok8/small.git;master" >> feeds.conf.default
