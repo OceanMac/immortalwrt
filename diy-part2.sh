@@ -11,27 +11,11 @@
 
 
 # Add luci-app-poweroff
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff ./package/lean/luci-app-poweroff
+git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff ./package/luci-app-poweroff
 
 # Add luci-app-netdata
 rm -rf ./feeds/luci/applications/luci-app-netdata/
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata ./feeds/luci/applications/luci-app-netdata/
-
-# Add luci-theme-neobird
-git clone --depth=1 https://github.com/thinktip/luci-theme-neobird ./package/lean/luci-theme-neobird
-default_theme='neobird'
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
-
-# Mod kernel_patchver
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.1/g' ./target/linux/rockchip/Makefile
-
-# Mod zzz-default-settings
-pushd package/lean/default-settings/files
-sed -i '/http/d' zzz-default-settings
-sed -i '/18.06/d' zzz-default-settings
-export orig_version=$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
-sed -i "s/${orig_version}/Firmware compiled by OceanMax/g" zzz-default-settings
-popd
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
