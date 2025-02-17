@@ -113,7 +113,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware${{ env.FILE_DATE }}
+        name: immortalwrt-rockchip-armv8-friendlyarm_nanopi-r4s${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
     
     - name: Generate release tag
@@ -132,7 +132,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_date }} NanoPi R4S OpenWrt
+        name: ${{ steps.tag.outputs.release_date }} immortalwrt-rockchip-armv8-friendlyarm_nanopi-r4s
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
