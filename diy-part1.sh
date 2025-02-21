@@ -14,7 +14,7 @@ echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-pa
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> feeds.conf.default
 
 # packages
-echo "src-git package https://github.com/immortalwrt/packages.git;master" >> feeds.conf.default
+echo "src-git immpackages https://github.com/immortalwrt/packages.git;master" >> feeds.conf.default
 
 # luci
-echo "src-git luci https://github.com/openwrt/luci.git;master" >> feeds.conf.default
+echo "src-git immluci https://github.com/openwrt/luci.git;master" >> feeds.conf.default
