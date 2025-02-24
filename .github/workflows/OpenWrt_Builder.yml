@@ -18,7 +18,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: v24.10.0
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config_1
+  CONFIG_FILE: .config
   DIY_SH: configuration.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
