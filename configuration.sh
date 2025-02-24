@@ -10,9 +10,8 @@
 # Description: OpenWrt DIY script (After Update feeds)
 
 
-# Modify default IP
-# sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
+# r8169
+sed -i 's,kmod-r8168,kmod-r8169,g' target/linux/rockchip/image/armv8.mk
 
-# Set default Theme
-default_theme='bootstrap'
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+# Modify default IP
+sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
